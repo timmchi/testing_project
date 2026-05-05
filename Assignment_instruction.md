@@ -10,21 +10,21 @@ Last modified: 05.04.2024
 
 # Assignment Deliverables
 
-- [ ] Create Test cases for all pages which are already there in project's **PageObject** folder
-  - [ ] 03_RegisterPage
-  - [ ] 04_ProjectPage
-  - [ ] 05_IssuePage
-- [ ] Perform all **TODO:** tasks describe in each above pages
-- [ ] Create bug report for one test case which are already there in project's BugReport folder
-  - [ ] 02_ProjectPageReport
-- [ ] Write Learning Reflection page
-  - [ ] 01_LearningReflection.md
-- [ ] Now you have completed your assignment it's time for you to share your assignment in github and Canvas.
-- [ ] Share your project on **GitHub**
-  - [ ] Create a new repository
+- [ X] Create Test cases for all pages which are already there in project's **PageObject** folder
+  - [ X] 03_RegisterPage
+  - [ X] 04_ProjectPage
+  - [ X] 05_IssuePage
+- [ X] Perform all **TODO:** tasks describe in each above pages
+- [ X] Create bug report for one test case which are already there in project's BugReport folder
+  - [ X] 02_ProjectPageReport
+- [X ] Write Learning Reflection page
+  - [ X] 01_LearningReflection.md
+- [X ] Now you have completed your assignment it's time for you to share your assignment in github and Canvas.
+- [X ] Share your project on **GitHub**
+  - [ X] Create a new repository
   - [ ] Add a README file and write your full name as seen on Laurea Pakki or Canvas, because your GitHub username may be different than your original name so it is easier for the teacher to recognize you and your assignment work.
-  - [ ] Upload your all project files and folders, using the Add file drop-down, click Upload files. Drag and drop the file or folder you'd like to upload to your repository
-  - [ ] **Do not upload the ZIP file on GitHub**
+  - [ X] Upload your all project files and folders, using the Add file drop-down, click Upload files. Drag and drop the file or folder you'd like to upload to your repository
+  - [X ] **Do not upload the ZIP file on GitHub**
   - [ ] Share your GitHub repository link in the **Canvas Assignment comments**.
 - [ ] Upload your project on **Cavas**
   - [ ] When you complete your testing assignment, Export it as a Zip file
