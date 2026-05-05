@@ -13,7 +13,7 @@ Tags Issues, CRUD, TS-4-Issue
 
 *** Variables ***
 
-ProjectIssuesUrl = https://gitlab.com/timmchi-group/timmchi-project/-/work_items
+ProjectIssuesUrl = https://gitlab.com/test-group/test-project/-/work_items
 IssueTitle = First Issue
 IssueDescription = Test issue for the testing project Assignment
 UpdatedIssueTitle = Updated first issue
@@ -29,17 +29,20 @@ SecondIssueTitle = Updated first issue
 
 	Create issue,
      - Open existing project
-     - Navigate to Issues
-     - Click "New Issue" button
+     - Choose Plan
+     - Choose Issue boards
+     - Click "Create New Issue" button
      - Input Issue title    IssueTitle
-     - Input Issue description  IssueDescription
      - Click "Create Issue" button
+     - Click "Edit"
+     - Input Issue description  IssueDescription
+     - Press "Save Changes"
      - Verify Issue was created
      - Verify page contains     IssueTitle
 
  	Update name of issue, 
      - Open existing issue      IssueTitle
-     - Click "Edit Issue"
+     - Click "Edit"
      - Input Issue title        UpdatedIssueTitle
      - Save Changes
      - Verify issue title was updated
@@ -51,14 +54,16 @@ SecondIssueTitle = Updated first issue
      - Navigate to Issues
      - Click "New Issue" button
      - Input issue title        SecondIssueTitle
-     - Input issue description      IssueDescription
      - Click "Create Issue" button
+     - Click "Edit"
+     - Input issue description      IssueDescription
+     - Press "Save Changes"
      - Verify second issue was created
      - Verify page contains     SecondIssueTitle
 
     Delete first issue
      - Open existing issue      UpdatedIssueTitle
-     - Click "Edit"
+     - Click three dots
      - Click "Delete Issue"
-     - Click "Confirm Delete Issue"
+     - Click "Delete Issue"
      - Verify issue was deleted
