@@ -22,6 +22,7 @@ FirstName = Tester
 LastName = Testerowski
 Username = tester67999
 Email = tester.test@yahoo.com
+NewValidEmail = testaaja@gmail.com
 Password = DuMmY_passw0rd!
 VerificationCode = XYZBB4
 ExistingUsername = tester67999
@@ -32,9 +33,7 @@ EmptyField =
 
 *** Test Case ***
 
-# TODO: Write Positive and Negative Test Cases and Test Process steps (Think about possible test cases)
-
-# Positive Test examples are below write test process steps for each below test case
+# Positive Tests
 
 	Register user with valid username and password 
 	- Navigate to Registration Page SignupURL
@@ -48,11 +47,36 @@ EmptyField =
     - Press Verify email address
     - Verify that the registration was successful
 
-# Negative Test examples keywords are below write test process steps for each below test case 
+# Negative Tests
 
-	Register user with same above username,
-		...empty password,
-		...invalid email,
-		...Without recaptcha,
+	Register user with same above Username
+     - Navigate to Registration Page SignupURL
+     - Input First Name FirstName
+     - Input Last Name LastName
+     - Input Username ExistingUsername
+     - Input Email NewValidEmail
+     - Input Password Password
+     - Submit registration Form
+     - Verify Error Message "Username is already taken"
+
+    Register user with invalid email
+     - Navigate to Registration Page SignupURL
+     - Input First Name FirstName
+     - Input Last Name LastName
+     - Input Username Username
+     - Input Email WrongEmail
+     - Input Password Password
+     - Submit registration Form
+     - Verify Error Message "Make sure that you have entered the correct email address."
+
+    Register user with empty password field
+     - Navigate to Registration Page SignupURL
+     - Input First Name FirstName
+     - Input Last Name LastName
+     - Input Username Username
+     - Input Email Email
+     - Input Password Empty
+     - Submit registration Form
+     - Verify Error Message "Must be between 8-128 characters"
 
 
