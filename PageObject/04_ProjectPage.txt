@@ -3,42 +3,85 @@
 
 *** Settings ***
 
-# TODO: Write Dcocumentation e.g. Project Test scenario. CRUD Operation: Create, Read, Update, Delete
-
-Documentation	Testing the Project page functionality
+Documentation	Testing the Project page functionality. CRUD Operations: Create, Read, Update, Delete
 
 # TODO: Write Precondition, Postcondition, Tags
 
-Pre Condition	 
-Post Condition	
-Tags
+Pre Condition	 Must be already logged in to GitLab
+Post Condition	Delete the created projects and close the browser
+Tags Project, CreateProjects, CRUD, TS-3-Project
 
 #******************* Common Variables ********************
 
 *** Variables ***
 
-# NOTE: Please Remove your login credential before uploading Assignments
-
-# TODO: Write Project creation field variables
-
-
+ProjectUrl = https://gitlab.com/projects/new
+EmptyProjectUrl = https://gitlab.com/projects/new#empty_project
+TemplateProjectUrl = https://gitlab.com/projects/new#create_from_template
+ProjectName = Test project
+ProjectSlug = test-project
+TemplateProjectName = Template project
+UpdatedTemplateProjectName = Updated template project
+DuplicateProjectName = Test project
+VisibilityPrivate = VisibilityPrivate
+ExpectedSuccessMsg = Project 'Test project' was successfully created.
+ExpectedErrorMsg = Project name or path already exists
 
 #******************** Test Cases *************************
 
 *** Test Case ***
 
-# TODO: Write Positive and Negative Test Cases and Test Process steps
-
-# Positive Test examples are below write test process steps for each below test case
+# Positive Tests SEE IF IT IS ACTUALLY THE SAME NAMING IN GITLAB
 
 	Create blank project
+     - Open project page ProjectUrl
+     - Select Create blank Project
+     - Input Project Name ProjectName
+     - Input Project slug ProjectSlug
+     - Select Visbility level VisibilityPrivate
+     - Press Create Project Button
+     - Verify the Project was Created successfully
+     - Verify Page contains ExpectedSuccessMsg
+
 	Create template project 
-	Update name of template project
+     - Open project page ProjectUrl
+     - Select Create From Template
+     - Choose Template
+     - Input Project Name TemplateProjectName
+     - Select Visibility Level VisibilityPrivate
+     - Click Create Project Button
+     - Verify Page contains ExpectedSuccessMsg
+
+	Update name of template project 
+     - Open created Template project
+     - Navigate to Project Settings
+     - Open General Settings
+     - Input New Project Name UpdatedTemplateProjectName
+     - Save Changes
+     - Verify Project Name is updated
+
 	Delete template project
-	Valide that message is showing Project 'First project ' was successfully created.
+     - Open Created Template Project
+     - Navigate To Project Settings
+     - Open Advanced Settings
+     - Click Delete Project
+     - Confirm Project Deletion
+     - Verify Project Is Deleted
+	
+    Validate that message is showing Project 'First project' was successfully created
+     - Navigate To Project Page       BlankProjectUrl
+     - Input Project Name             ProjectName
+     - Input Project Slug             ProjectSlug
+     - Select Visibility Level        VisibilityPrivate
+     - Click Create Project button
+     - Verify Page contains     ExpectedSuccessMessage
 
 # Negative Test examples are below write test process steps for each below test case
 
 	Create a blank project with the previous same name
-
-
+     - Navigate To Project Page       EmptyProjectUrl
+     - Input Project Name             DuplicateProjectName
+     - Input Project Slug             ProjectSlug
+     - Select Visibility Level        VisibilityPrivate
+     - Click Create Project Button
+     - Verify error message contains ExpectedErrorMsg
