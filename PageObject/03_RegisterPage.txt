@@ -3,15 +3,11 @@
 
 *** Settings ***
 
-# TODO: Write Documentation e.g. User Registration Test scenario with verification, valid and invalid credentials.
+Documentation	Testing the Registration functionality of Gitlab signing up page. Testing verification, and scenarios with valid and invalid credentials.
 
-Documentation	
-
-# TODO: Write Precondition, Postcondition, Tags
-
-Pre Condition	
-Post Condition	
-Tags
+Pre Condition	The browser is open. Gitlab sign up page (https://gitlab.com/users/sign_up) is open
+Post Condition	Close the browser.
+Tags Registration, Signup, TS-2-Registration
 
 #******************* Common Variables ********************
 

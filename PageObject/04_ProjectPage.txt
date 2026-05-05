@@ -5,7 +5,7 @@
 
 # TODO: Write Dcocumentation e.g. Project Test scenario. CRUD Operation: Create, Read, Update, Delete
 
-Documentation	
+Documentation	Testing the Project page functionality
 
 # TODO: Write Precondition, Postcondition, Tags
 
