@@ -26,6 +26,7 @@ DuplicateProjectName = Test project
 VisibilityPrivate = VisibilityPrivate
 ExpectedSuccessMsg = Project 'Test project' was successfully created.
 ExpectedErrorMsg = Project name or path already exists
+GroupName = test-group
 
 #******************** Test Cases *************************
 
@@ -34,7 +35,8 @@ ExpectedErrorMsg = Project name or path already exists
 # Positive Tests SEE IF IT IS ACTUALLY THE SAME NAMING IN GITLAB
 
 	Create blank project
-     - Open project page    ProjectUrl
+     - Open projects page    ProjectUrl
+     - Click "New project"
      - Select "Create blank project"
      - Input Project Name   ProjectName
      - Input Project slug   ProjectSlug
@@ -44,7 +46,8 @@ ExpectedErrorMsg = Project name or path already exists
      - Verify Page contains     ExpectedSuccessMsg
 
 	Create template project 
-     - Open project page    ProjectUrl
+     - Open projects page    ProjectUrl
+     - Click "New project"
      - Select Create From Template
      - Choose Template
      - Input Project Name   TemplateProjectName
@@ -62,9 +65,11 @@ ExpectedErrorMsg = Project name or path already exists
 
 	Delete template project
      - Open Created Template Project
-     - Navigate To Project Settings
+     - Navigate To Settings
+     - Open General Settings
      - Open Advanced Settings
      - Click Delete Project
+     - Enter the deletion phrase    GroupName/UpdatedTemplateProjectName
      - Confirm Project Deletion
      - Verify Project Is Deleted
 	
