@@ -28,6 +28,37 @@ SecondIssueTitle = Updated first issue
 # Positive Test examples are below write test process steps for each below test case
 
 	Create issue,
+     - Open existing project
+     - Navigate to Issues
+     - Click "New Issue" button
+     - Input Issue title    IssueTitle
+     - Input Issue description  IssueDescription
+     - Click "Create Issue" button
+     - Verify Issue was created
+     - Verify page contains     IssueTitle
+
  	Update name of issue, 
-	Create second issue with privious updated name
+     - Open existing issue      IssueTitle
+     - Click "Edit Issue"
+     - Input Issue title        UpdatedIssueTitle
+     - Save Changes
+     - Verify issue title was updated
+     - Verify page contains     UpdatedIssueTitle
+
+
+	Create second issue with previous updated name
+     - Open existing project
+     - Navigate to Issues
+     - Click "New Issue" button
+     - Input issue title        SecondIssueTitle
+     - Input issue description      IssueDescription
+     - Click "Create Issue" button
+     - Verify second issue was created
+     - Verify page contains     SecondIssueTitle
+
     Delete first issue
+     - Open existing issue      UpdatedIssueTitle
+     - Click "Edit"
+     - Click "Delete Issue"
+     - Click "Confirm Delete Issue"
+     - Verify issue was deleted

@@ -34,29 +34,29 @@ ExpectedErrorMsg = Project name or path already exists
 # Positive Tests SEE IF IT IS ACTUALLY THE SAME NAMING IN GITLAB
 
 	Create blank project
-     - Open project page ProjectUrl
-     - Select Create blank Project
-     - Input Project Name ProjectName
-     - Input Project slug ProjectSlug
-     - Select Visbility level VisibilityPrivate
+     - Open project page    ProjectUrl
+     - Select "Create blank project"
+     - Input Project Name   ProjectName
+     - Input Project slug   ProjectSlug
+     - Select Visbility level   VisibilityPrivate
      - Press Create Project Button
-     - Verify the Project was Created successfully
-     - Verify Page contains ExpectedSuccessMsg
+     - Verify the Project was created successfully
+     - Verify Page contains     ExpectedSuccessMsg
 
 	Create template project 
-     - Open project page ProjectUrl
+     - Open project page    ProjectUrl
      - Select Create From Template
      - Choose Template
-     - Input Project Name TemplateProjectName
-     - Select Visibility Level VisibilityPrivate
+     - Input Project Name   TemplateProjectName
+     - Select Visibility Level  VisibilityPrivate
      - Click Create Project Button
-     - Verify Page contains ExpectedSuccessMsg
+     - Verify Page contains     ExpectedSuccessMsg
 
 	Update name of template project 
      - Open created Template project
      - Navigate to Project Settings
      - Open General Settings
-     - Input New Project Name UpdatedTemplateProjectName
+     - Input New Project Name   UpdatedTemplateProjectName
      - Save Changes
      - Verify Project Name is updated
 
@@ -84,4 +84,4 @@ ExpectedErrorMsg = Project name or path already exists
      - Input Project Slug             ProjectSlug
      - Select Visibility Level        VisibilityPrivate
      - Click Create Project Button
-     - Verify error message contains ExpectedErrorMsg
+     - Verify error message contains    ExpectedErrorMsg
