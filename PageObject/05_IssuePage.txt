@@ -4,22 +4,20 @@
 *** Settings ***
 Documentation	Issue Test scenario. CRUD Operation: Create, Read, Update, Delete
 
-# TODO: Write Precondition and Postcondition, Tags 
-
-Pre Condition	Tips: Project must be created by the user before 
-Post Condition	
-Tags
+Pre Condition	Tips: Project must be created by the user before + user must be logged in
+Post Condition	Delete issues + close browser
+Tags Issues, CRUD, TS-4-Issue
 
 #******************* Common Variables ********************
 
 
 *** Variables ***
 
-# NOTE: Please Remove your login credential before uploading Assignments
-
-# TODO: Write Issue creation field variables, Updated name of the issue
-
-
+ProjectIssuesUrl = https://gitlab.com/timmchi-group/timmchi-project/-/work_items
+IssueTitle = First Issue
+IssueDescription = Test issue for the testing project Assignment
+UpdatedIssueTitle = Updated first issue
+SecondIssueTitle = Updated first issue
 
 #******************** Test Cases *************************
 
